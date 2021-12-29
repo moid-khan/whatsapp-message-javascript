@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="text" id="phone_num">
+        <textarea name="" id="msg_box" cols="30" rows="10"></textarea>
+        <button onclick="sendMsg()">Send Message</button>
+    </div>
+    <script>
+
+        // API
+        // https://web.whatsapp.com/send?phone=PHONE_NUMBER_HERE&text=TEXT_HERE
+        function sendMsg(){
+            let msgBox = document.querySelector('#msg_box').value
+            let phoneNum = document.querySelector('#phone_num').value
+            window.open(`https://web.whatsapp.com/send?phone=${phoneNum}&text=${msgBox}`)
+        }
+    </script>
+</body>
+</html>
